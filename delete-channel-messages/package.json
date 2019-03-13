@@ -1,0 +1,23 @@
+{
+  "name": "delete-channel-messages",
+  "version": "1.0.0",
+  "description": "Deletes slack public/private channel and chat messages.",
+  "main": "delete-channel-messages.js",
+  "scripts": {
+    "start": "npm run start:personal",
+    "start:gocanvas": "WORKSPACE=gocanvas node delete-channel-messages.js",
+    "start:personal": "WORKSPACE=personal node delete-channel-messages.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Slack",
+    "Slack",
+    "API",
+    "Messages"
+  ],
+  "author": "Bruce Bentley",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "7.0.0"
+  }
+}
