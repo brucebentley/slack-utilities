@@ -16,7 +16,6 @@
 //
 // #####################################################################################################################
 
-
 // #####################################################################################################################
 //
 // CONFIGURATION
@@ -30,19 +29,20 @@
 //
 // @USAGE:
 //   const token = process.env.SLACK_ACCESS_TOKEN;
-//   const token = process.env.SLACK_ACCESS_TOKEN;
+//   const token = process.env.DEFAULT_SLACK_ACCESS_TOKEN;
+//   const token = process.env.PERSONAL_SLACK_ACCESS_TOKEN;
+//   const token = process.env.COMPANY_SLACK_ACCESS_TOKEN;
 //
 
 const dotenv = require('dotenv');
 const path = require('path');
-dotenv.config({ path: path.resolve(__dirname, '../config/' + process.env.WORKSPACE + '.env')});
+dotenv.config({ path: path.resolve(__dirname, '../../config/' + process.env.WORKSPACE + '.env') });
 
 // --------------------------------------------------
 // Slack Workspace Access Tokens —
 // --------------------------------------------------
 
 const token = process.env.SLACK_ACCESS_TOKEN;
-
 
 // #####################################################################################################################
 //
@@ -61,22 +61,21 @@ if (process.argv[0].indexOf('node') !== -1 && process.argv.length > 2) {
   process.exit(1);
 }
 
-const https         = require('https');
-const baseApiUrl    = 'https://slack.com/api/';
-const messages      = [];
-const historyApiUrl = baseApiUrl + 'conversations.history?token=' + token + '&count=1000&channel=' + channel + '&cursor=';
-const deleteApiUrl  = baseApiUrl + 'chat.delete?token=' + token + '&channel=' + channel + '&ts='
-let   delay         = 300;  // Delay between delete operations in milliseconds.
-let   nextCursor    = '';
+const https = require('https');
+const baseApiUrl = process.env.SLACK_API_BASE_URL;
+const messages = [];
+const historyApiUrl =
+  baseApiUrl + 'conversations.history?token=' + token + '&count=1000&channel=' + channel + '&cursor=';
+const deleteApiUrl = baseApiUrl + 'chat.delete?token=' + token + '&channel=' + channel + '&ts=';
+let delay = 300; // Delay between delete operations in milliseconds.
+let nextCursor = '';
 
 //
 // ---------------------------------------------------------------------------------------------------------------------
 //
 
 function deleteMessage() {
-
   if (messages.length == 0) {
-
     if (nextCursor) {
       processHistory();
     }
@@ -86,33 +85,34 @@ function deleteMessage() {
 
   const ts = messages.shift();
 
-  https.get(deleteApiUrl + ts, function (res) {
+  https
+    .get(deleteApiUrl + ts, function(res) {
+      let body = '';
 
-    let body = '';
+      res.on('data', function(chunk) {
+        body += chunk;
+      });
 
-    res.on('data', function (chunk) {
-      body += chunk;
-    });
+      res.on('end', function() {
+        const response = JSON.parse(body);
 
-    res.on('end', function(){
-      const response = JSON.parse(body);
+        if (response.ok === true) {
+          console.log(ts + ' deleted!');
+        } else if (response.ok === false) {
+          console.log(ts + ' could not be deleted! (' + response.error + ')');
 
-      if (response.ok === true) {
-        console.log(ts + ' deleted!');
-      } else if (response.ok === false) {
-        console.log(ts + ' could not be deleted! (' + response.error + ')');
-
-        if (response.error === 'ratelimited') {
-          delay += 100;  // If rate limited error caught then we need to increase delay.
-          messages.push(ts);
+          if (response.error === 'ratelimited') {
+            delay += 100; // If rate limited error caught then we need to increase delay.
+            messages.push(ts);
+          }
         }
-      }
 
-      setTimeout(deleteMessage, delay);
+        setTimeout(deleteMessage, delay);
+      });
+    })
+    .on('error', function(e) {
+      console.error('Got an error: ', e);
     });
-  }).on('error', function (e) {
-    console.error("Got an error: ", e);
-  });
 }
 
 //
@@ -120,37 +120,35 @@ function deleteMessage() {
 //
 
 function processHistory() {
+  https
+    .get(historyApiUrl + nextCursor, function(res) {
+      let body = '';
 
-  https.get(historyApiUrl + nextCursor, function(res) {
+      res.on('data', function(chunk) {
+        body += chunk;
+      });
 
-    let body = '';
+      res.on('end', function() {
+        nextCursor = null;
 
-    res.on('data', function (chunk) {
-      body += chunk;
-    });
+        const response = JSON.parse(body);
 
-    res.on('end', function () {
+        if (response.messages && response.messages.length > 0) {
+          if (response.has_more) {
+            nextCursor = response.response_metadata.next_cursor;
+          }
 
-      nextCursor = null;
+          for (let i = 0; i < response.messages.length; i++) {
+            messages.push(response.messages[i].ts);
+          }
 
-      const response = JSON.parse(body);
-
-      if (response.messages && response.messages.length > 0) {
-
-        if (response.has_more) {
-          nextCursor = response.response_metadata.next_cursor;
+          deleteMessage();
         }
-
-        for (let i = 0; i < response.messages.length; i++) {
-          messages.push(response.messages[i].ts);
-        }
-
-        deleteMessage();
-      }
+      });
+    })
+    .on('error', function(e) {
+      console.error('Got an error: ', e);
     });
-  }).on('error', function (e) {
-    console.error("Got an error: ", e);
-  });
 }
 
 //

@@ -1,0 +1,967 @@
+/*
+*= require canvas-only-section
+*/
+
+.float-none {
+    float: none !important;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.no-text-shadow {
+    text-shadow: none !important;
+}
+
+.app-builder-launch-btn {
+    position: relative;
+}
+
+.app-builder-launch-btn:hover .dropdown-menu {
+    display: block;
+}
+
+.app-builder-launch-btn button {
+    margin: 0;
+    width: 100%;
+}
+
+.description_cell {
+    line-height: normal !important;
+}
+
+.width-auto {
+    width: auto !important;
+}
+
+.white_bg {
+    background: #ffffff !important;
+}
+
+.marketing_login {
+    text-align: center;
+    min-height: calc(100vh - 106px);
+    padding: 0;
+}
+
+.min-width-auto {
+    min-width: auto;
+}
+
+.break-word {
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+.white-space-normal {
+    white-space: normal;
+}
+
+.hover-none:hover {
+    background: inherit;
+}
+
+.errors ul {
+    padding: 0;
+    margin: 0;
+}
+
+/** fill seat css popup **/
+.open-set-plan {
+    padding: 10px;
+    background: #f9f9f9;
+}
+
+.max-height-scroll {
+    overflow-y: auto;
+    max-height: 271px;
+}
+
+.group-checkbox .checkbox-inline label {
+    font-weight: normal;
+}
+
+.group-checkbox input[type='checkbox'],
+.group-checkbox input[type='radio'] {
+    margin-top: 2px;
+}
+
+.recent-blog {
+    line-height: normal;
+    font-size: 13px;
+}
+
+.recent-blog li {
+    padding: 10px;
+}
+
+.blog-icon {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    width: 50px;
+    overflow: hidden;
+    font-size: 0;
+}
+
+/*** custom scolling fixes for apps category **/
+.hide_me {
+    display: none !important;
+}
+
+/* override the defualt pointer of collapsed menu of metismenu */
+.metismenu .fa.arrow:before {
+    content: '\f105';
+}
+
+.icon {
+    max-height: 41px !important;
+}
+
+.disabled_form {
+    pointer-events: none;
+    opacity: 0.2;
+}
+
+.font-size-50 {
+    font-size: 50px;
+}
+
+.font-size-40 {
+    font-size: 40px;
+}
+
+.font-size-45 {
+    font-size: 45px;
+}
+
+.font-size-28 {
+    font-size: 28px;
+}
+
+.font-size-35 {
+    font-size: 35px;
+}
+
+.font-size-38 {
+    font-size: 38px;
+}
+
+.color-green {
+    color: #008800;
+}
+
+.border-green {
+    border: 1px solid #008800;
+    padding: 10px;
+}
+
+.padding-top-bottom-15 {
+    padding: 15px 0 15px 0;
+}
+
+.padding-top-10 {
+    padding-top: 10px;
+}
+
+.text-heading-green {
+    color: #18a689;
+}
+
+.padding-10 {
+    padding: 10px;
+}
+
+.override-border {
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+}
+
+.table-display {
+    display: table;
+}
+
+.table-cell-display {
+    display: table-cell;
+}
+
+.width-20 {
+    width: 20% !important;
+}
+
+.width-25 {
+    width: 25%;
+}
+
+.width-75 {
+    width: 75%;
+}
+
+.middle-vertical-align {
+    vertical-align: middle;
+}
+
+.padding-left-50 {
+    padding-left: 50px;
+}
+
+.no-background {
+    background: none !important;
+    margin: 0 -15px 0 -15px;
+}
+
+.left-margin-12 {
+    margin-left: 12px !important;
+}
+
+.width-96 {
+    width: 96%;
+}
+
+.font-weight-800 {
+    font-weight: 800;
+}
+
+.border-connected {
+    border-top: 2px solid #18a689;
+    position: relative;
+}
+
+.border-connected:before {
+    content: 'Connected';
+    color: #18a689;
+    top: 4px;
+    position: absolute;
+    left: 12px;
+}
+
+/*** app store related csss **/
+.list-scroll {
+    max-height: 260px;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.occupation-icon {
+    margin-right: 10px;
+    width: 15px;
+}
+
+.t-tip-icon {
+    color: #9c9c9c;
+    padding-left: 5px;
+    cursor: default;
+}
+
+.h-90 {
+    min-height: 90px;
+}
+
+.h-150 {
+    min-height: 150px;
+}
+
+.h-130 {
+    min-height: 130px;
+}
+
+.h-mx-180 {
+    max-height: 180px;
+}
+
+.h-575 {
+    min-height: 575px;
+}
+
+.h-mn-400 {
+    min-height: 400px;
+}
+
+.top-150 {
+    margin-top: 150px;
+}
+
+.top-margin-25-n {
+    margin-top: -25px;
+}
+
+.top-margin-7 {
+    margin-top: 7px;
+}
+
+.margin-2 {
+    margin: 2px;
+}
+
+.drag-helper {
+    border: 1px solid rgba(0, 153, 204, 0.3) !important;
+    border-radius: 3px;
+    border-collapse: unset;
+    cursor: copy;
+    display: table;
+    background: #f9f9f9;
+}
+
+.drag-helper td {
+    padding: 8px;
+}
+
+.drag-helper td:nth-child(2) {
+    width: 48%;
+}
+
+.drag-helper td:nth-child(3) > span {
+    width: 67px;
+}
+
+.cvs-store-bg {
+    background-image: url('appstore_headerbg.jpg');
+    background-repeat: repeat-x;
+    background-position: center center;
+    background-size: cover;
+    box-shadow: 0 1px 5px 0 #888888;
+    padding: 25px;
+}
+
+.border-color-dedede {
+    border-color: #dedede;
+}
+
+.sendus-request > div {
+    height: 150px;
+    overflow: hidden;
+}
+
+.req-btn {
+    float: right;
+}
+
+.apps-temp h5 {
+    margin: 0;
+    font-size: 13px !important;
+}
+
+.truncate {
+    width: 250px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 55px;
+}
+
+.font-size-30 {
+    font-size: 30px;
+}
+
+.black-color {
+    color: #262626;
+}
+
+.small-logo .default-image {
+    font-size: 10px;
+}
+
+.small-logo .spinner-loader {
+    padding-top: 0 !important;
+}
+
+.customize-row-color .even td {
+    background: #ececec;
+}
+
+.customize-row-color .odd td {
+    background: #ffffff;
+}
+
+.font-size-9 {
+    font-size: 9px;
+}
+
+.top-border-blue {
+    border-top: 2px solid #029fe9;
+    position: relative;
+    padding: 5px;
+}
+
+.chart-loader-center {
+    position: absolute;
+    margin-top: 20%;
+    margin-left: 40%;
+}
+
+.padding-13px {
+    padding: 13px;
+}
+
+.height-fh-less {
+    min-height: calc(100% - 106px);
+}
+
+/*
+* When ever error come on any field a div gets appended to it with the below class
+* this class distorts the page ui , so to overcome from it below css is added
+*/
+.field_with_errors {
+    display: inline;
+}
+
+.table-odd {
+    background-color: #f9f9f9;
+}
+
+.folder-selected {
+    background-color: #f5f5f5;
+}
+
+.folder a:focus {
+    outline: none !important;
+}
+
+.nested-folder:hover {
+    background-color: #f5f5f5;
+}
+
+.folder {
+    overflow: auto;
+    max-height: 280px;
+}
+
+.folder-icon-checked {
+    width: 2.2%;
+}
+
+.left-nav-icon {
+    width: 25px;
+    display: inline-block;
+}
+
+.div-overlay-with-content,
+.div-overlay-with-content-custom {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 2;
+    bottom: 0;
+}
+
+.div-overlay-with-content-custom {
+    z-index: 3;
+    bottom: 20px;
+}
+
+.managing_users {
+    position: absolute;
+    right: 0;
+    z-index: 10000;
+}
+
+.text_green {
+    color: #50ab5e !important;
+}
+
+.text_light_grey {
+    color: #bbbdbf !important;
+}
+
+.has-bg-icon {
+    pointer-events: none;
+    margin: 10px 0 0 15px;
+    position: absolute;
+    z-index: 3;
+    padding: 0 1px;
+}
+
+.text_field_with_icon {
+    padding-left: 40px !important;
+    display: inline-block;
+}
+
+.suyf-signup .text_field_with_icon {
+    padding-left: 5px !important;
+}
+
+.error_icon {
+    right: 20px;
+    top: 10px;
+    position: absolute;
+    z-index: 2;
+}
+
+#submission_numbering_options .table-hover > tbody > tr {
+    background-color: #f5f5f5;
+}
+
+#submission_numbering_options .reset_numbering {
+    margin-left: -12px !important;
+}
+
+.canvas_nav_icon {
+    margin-left: 3px;
+}
+
+.login_main input:focus {
+    outline: none;
+}
+
+.login_main.group {
+    position: relative;
+    margin-bottom: 45px;
+}
+
+.login_main input {
+    padding: 10px 10px 10px 5px;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #757575;
+    border-radius: 0;
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+/* LABEL ======================================= */
+.login_main label {
+    color: #999999;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 0;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.login_main .placeholder-position {
+    font-size: 14px;
+    color: #1c84c6;
+    top: -20px;
+} /* BOTTOM BARS ================================= */
+.login_main .bar {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.login_main .bar:before,
+.login_main .bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: #1c84c6;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.login_main .bar:before {
+    left: 50%;
+}
+
+.login_main .bar:after {
+    right: 50%;
+}
+
+/* active state */
+.login_main input:focus ~ .bar:before,
+.login_main input:focus ~ .bar:after {
+    width: 50%;
+}
+
+.edit-app {
+    vertical-align: middle;
+}
+
+.edit-app + span {
+    vertical-align: middle;
+}
+
+.errorExplanation {
+    background-color: #bd362f;
+    color: #ffffff;
+    padding: 1px 5px 5px 20px;
+    margin-bottom: 10px;
+}
+
+.errorExplanation h2 {
+    font-size: 20px !important;
+}
+
+.field_error {
+    border-color: red !important;
+}
+
+.text_red {
+    color: #cc0000 !important;
+}
+
+.white_background {
+    background-color: white !important;
+}
+
+.tooltip_custom_style {
+    width: 160px;
+    text-align: left;
+}
+
+.font-size-18 {
+    font-size: 18px;
+}
+
+.folder-item {
+    line-height: 40px;
+}
+
+.text-bold {
+    font-weight: 700;
+}
+
+.text-bold-light {
+    font-weight: 500;
+}
+
+.hide-placeholder-on-focus:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+.hide-placeholder-on-focus:focus:-moz-placeholder {
+    color: transparent;
+} /* FF 4-18 */
+.hide-placeholder-on-focus:focus::-moz-placeholder {
+    color: transparent;
+} /* FF 19+ */
+.hide-placeholder-on-focus:focus:-ms-input-placeholder {
+    color: transparent;
+}
+
+.hide-placeholder-on-focus:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+.hide-placeholder-on-focus:focus:-moz-placeholder {
+    color: transparent;
+} /* FF 4-18 */
+.hide-placeholder-on-focus:focus::-moz-placeholder {
+    color: transparent;
+} /* FF 19+ */
+.hide-placeholder-on-focus:focus:-ms-input-placeholder {
+    color: transparent;
+}
+
+.top-vertical-align {
+    vertical-align: top;
+}
+
+.ellipses-text {
+    white-space: nowrap;
+    width: 60%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+}
+
+.navbar-top-links {
+    font-weight: normal !important;
+    line-height: normal;
+}
+
+.logout-btn {
+    padding: 9px 10px;
+    color: #b9c6d0;
+}
+
+.logout-btn a:hover,
+.logout-btn a:focus {
+    color: #ffffff;
+}
+
+.no_underline:hover {
+    text-decoration: none !important;
+    color: #0084df;
+}
+
+.no_underline:focus {
+    text-decoration: none !important;
+    color: #0084df;
+}
+
+.revisions-widget:hover {
+    color: #ffffff;
+}
+
+.screen-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) !important;
+    -webkit-transform: translate(-50%, -50%) !important;
+    -ms-transform: translate(-50%, -50%) !important;
+}
+
+.underline-hover:focus {
+    text-decoration: underline;
+}
+
+.no-underline-hover:hover,
+.no-underline-hover:focus {
+    text-decoration: none !important;
+}
+
+.color-inherit {
+    color: inherit !important;
+}
+
+.no-outline:focus {
+    outline: none;
+}
+
+.h-45px {
+    height: 45px;
+}
+
+.h-115px {
+    height: 115px;
+}
+
+.delete_icon_logo {
+    position: absolute;
+    right: 1.4%;
+}
+
+.relative-position {
+    position: relative;
+}
+
+.ui-multiselect-header {
+    margin: 0;
+    padding: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background: none;
+}
+
+.custom-position-bottom {
+    position: absolute;
+    display: inline-block;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+.ui-multiselect-menu {
+    padding-bottom: 4px;
+}
+
+li.folder-item {
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+li.folder-item:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+li.folder-item:last-child {
+    border: none;
+}
+
+.modal-vertical-centered {
+    transform: translate(0, 30%) !important;
+    -ms-transform: translate(0, 30%) !important; /* IE 9 */
+    -webkit-transform: translate(0, 30%) !important; /* Safari and Chrome */
+}
+
+.item-count {
+    min-width: 30px;
+    max-width: 30px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding: 3px 2px;
+}
+
+.try_it_free_top_nav {
+    padding: 8px 10px 8px 8px;
+}
+
+.padding-50px {
+    padding-right: 50px !important;
+}
+
+.padding-45px {
+    padding-right: 45px !important;
+}
+
+.signup-page-box {
+    min-height: calc(100% - 56px) !important;
+    background-color: #ffffff !important;
+}
+
+.h-mx-355 {
+    max-height: 355px;
+}
+
+.m-r-4p {
+    margin-right: 4%;
+}
+
+.outline-0 {
+    outline: 0 !important;
+}
+
+.h-60 {
+    height: 60px;
+}
+
+.department-dd-scroll {
+    overflow-y: auto;
+    max-height: 370px;
+}
+
+#typed:after {
+    content: '|';
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    -ms-animation: blink 0.7s infinite;
+    -o-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+
+.typed-cursor {
+    display: none;
+}
+
+@-webkit-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.flex-1 td,
+.flex-1 th {
+    flex: 1 !important;
+}
+
+.no-border-required .ibox {
+    border-top: 0;
+}
+
+.go_canvas_icon {
+    height: 32px;
+    width: 32px;
+}
+
+.go_canvas_icon_small {
+    fill: #ffffff;
+    margin-left: 3px;
+}
+
+.go_canvas_icon_small svg {
+    height: 20px;
+}
+
+li.active > .btn-danger > .go_canvas_icon_small,
+li:hover > .btn-danger > .go_canvas_icon_small {
+    fill: #ffffff;
+}
+
+.hide_select_icon::-ms-expand {
+    display: none;
+}
+
+.main_signup {
+    display: none;
+}
+
+#typed {
+    display: inline-block;
+    width: 140px;
+}
+
+.country_label {
+    display: none !important;
+}
+
+.hidden_password_field {
+    opacity: 0;
+    position: absolute;
+    height: 0;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset !important;
+}
+
+.wistia-loader {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 40%;
+}
+
+.ellipses-text-n-w {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.z-index-1 {
+    z-index: 1 !important;
+}
+
+.width-140px {
+    width: 140px;
+}
+
+.field_value_style {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+}

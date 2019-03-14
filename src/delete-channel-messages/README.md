@@ -1,22 +1,8 @@
-# Slack Utilities
-
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
-
-## Configure Slack Workspace Environments —
-
-Copy the provided `.env.sample` file and rename it accordingly to match each of your Slack Workspaces.
-
-```sh
-$ cp config/.env.sample config/{default,personal,work}.env
-```
-
-## Available Slack Utilities —
-
-### Delete Slack Messages
+# Delete Slack Messages
 
 Deletes Slack public & private channel and chat messages.
 
-#### Locating The `CHANNEL_ID` —
+## Locating The `CHANNEL_ID` —
 
 > *nbsp;
 > **Please Note:**  
@@ -31,7 +17,7 @@ Deletes Slack public & private channel and chat messages.
 -   The `CHANNEL_ID` hash can be found in the URL for each individual channel or chat message.
     -   **For Example:** `https://yourworkspace.slack.com/messages/CHANNEL_ID/`
 
-#### Running The Script —
+## Running The Script —
 
 ```js
 $ WORKSPACE=DEFAULT node delete-slack-messages.js <CHANNEL_ID>

@@ -1,0 +1,56 @@
+{
+  "name": "slack-utilities",
+  "version": "1.0.0",
+  "description": "A utility tookit to interact with the Slack API using Node.js",
+  "keywords": [
+    "Slack",
+    "Slack API",
+    "JavaScript",
+    "Node.js",
+    "Utilities"
+  ],
+  "homepage": "https://github.com/brucebentley/slack-utilities/",
+  "author": "Bruce Bentley <brucebentley@me.com>",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run cleanup && npm install",
+    "cleanup": "rm -rf node_modules package-lock.json yarn.lock",
+    "delete:default": "WORKSPACE=DEFAULT node ./src/delete-channel-messages/delete-channel-messages.js",
+    "delete:gocanvas": "WORKSPACE=GOCANVAS node ./src/delete-channel-messages/delete-channel-messages.js",
+    "delete:personal": "WORKSPACE=PERSONAL node ./src/delete-channel-messages/delete-channel-messages.js",
+    "format:all": "npx prettier --config ./.prettierrc --write \"src/**/*.{js,json,jsx,css,scss}\"",
+    "format:check": "npx prettier --config ./.prettierrc --check \"src/**/*.{js,json,jsx,css,scss}\"",
+    "format:fix": "npx pretty-quick --staged",
+    "format:js": "npx eslint --write 'src/**/*.{js,jsx}'",
+    "format:styles": "npx prettier-stylelint --write 'src/**/*.{css,scss}'",
+    "format": "run-p format:all",
+    "lint:js": "npx eslint \"src/**/*.js\"",
+    "lint:styles": "npx stylelint \"src/**/*.{css,scss}\" --fix",
+    "lint": "run-p lint:*",
+    "precommit": "run-s format:fix",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:brucebentley/slack-utilities.git"
+  },
+  "bugs": {
+    "url": "https://github.com/brucebentley/slack-utilities/issues"
+  },
+  "dependencies": {
+    "@slack/client": "4.11.0",
+    "dotenv": "7.0.0"
+  },
+  "devDependencies": {
+    "eslint": "5.15.1",
+    "eslint-config-prettier": "4.1.0",
+    "eslint-plugin-prettier": "3.0.1",
+    "husky": "1.3.1",
+    "npm-run-all": "4.1.5",
+    "prettier": "1.16.4",
+    "prettier-stylelint": "0.4.2",
+    "pretty-quick": "1.10.0",
+    "stylelint-config-standard": "18.2.0"
+  },
+  "license": "MIT"
+}
