@@ -38,7 +38,7 @@
     "url": "https://github.com/brucebentley/slack-utilities/issues"
   },
   "dependencies": {
-    "@slack/client": "4.12.0",
+    "@slack/client": "5.0.2",
     "dotenv": "7.0.0"
   },
   "devDependencies": {
