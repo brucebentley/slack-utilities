@@ -2,11 +2,17 @@
   "extends": [
     "config:base"
   ],
+  "rangeStrategy": "replace",
+  "lockFileMaintenance": {
+    "enabled": true,
+    "extends": "schedule:weekly"
+  },
   "packageRules": [
     {
+      "automerge": true,
       "depTypeList": [ "devDependencies" ],
+      "rangeStrategy": "bump",
       "updateTypes": [ "minor", "patch", "pin", "digest" ],
-      "automerge": true
     }
   ]
 }
