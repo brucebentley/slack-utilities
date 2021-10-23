@@ -41,7 +41,7 @@
     "@slack/client": "5.0.2",
     "braces": "^3.0.2",
     "dotenv": "8.2.0",
-    "stylelint": "^13.9.0"
+    "stylelint": "^14.0.0"
   },
   "devDependencies": {
     "eslint": "7.18.0",
