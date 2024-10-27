@@ -39,7 +39,7 @@
   },
   "dependencies": {
     "@slack/client": "5.0.2",
-    "braces": "^3.0.2",
+    "braces": "^3.0.3",
     "dotenv": "16.3.1",
     "stylelint": "^15.0.0"
   },
